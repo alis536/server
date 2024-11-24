@@ -901,6 +901,9 @@ export interface ApiOrderOrder extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.user'
     >;
+    name: Attribute.String;
+    lastname: Attribute.String;
+    email: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -925,6 +928,7 @@ export interface ApiOrderProductOrderProduct extends Schema.CollectionType {
     singularName: 'order-product';
     pluralName: 'order-products';
     displayName: 'Order Product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -943,6 +947,7 @@ export interface ApiOrderProductOrderProduct extends Schema.CollectionType {
     amount: Attribute.BigInteger;
     total: Attribute.BigInteger;
     username: Attribute.String;
+    progress: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

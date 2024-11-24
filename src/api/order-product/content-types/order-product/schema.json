@@ -4,7 +4,8 @@
   "info": {
     "singularName": "order-product",
     "pluralName": "order-products",
-    "displayName": "Order Product"
+    "displayName": "Order Product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -29,6 +30,9 @@
       "type": "biginteger"
     },
     "username": {
+      "type": "string"
+    },
+    "progress": {
       "type": "string"
     }
   }
