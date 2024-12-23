@@ -65,29 +65,20 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "orders": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::order.order",
-      "mappedBy": "users_permissions_user"
-    },
     "reviews": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "customer"
     },
-    "lastname": {
-      "type": "string"
-    },
-    "surname": {
-      "type": "string"
-    },
-    "birthdate": {
-      "type": "date"
-    },
     "phoneNumber": {
       "type": "biginteger"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "customer"
     }
   }
 }

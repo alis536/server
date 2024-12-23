@@ -18,6 +18,15 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "orders"
     },
+    "order_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-product.order-product",
+      "mappedBy": "order"
+    },
+    "progress": {
+      "type": "string"
+    },
     "address": {
       "type": "text"
     },
@@ -27,26 +36,14 @@
     "total": {
       "type": "biginteger"
     },
-    "order_products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::order-product.order-product",
-      "mappedBy": "order"
-    },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "orders"
-    },
     "name": {
-      "type": "string"
+      "type": "text"
     },
     "lastname": {
-      "type": "string"
+      "type": "text"
     },
     "email": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

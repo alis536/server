@@ -770,20 +770,17 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    orders: Attribute.Relation<
-      'plugin::users-permissions.user',
-      'oneToMany',
-      'api::order.order'
-    >;
     reviews: Attribute.Relation<
       'plugin::users-permissions.user',
       'oneToMany',
       'api::review.review'
     >;
-    lastname: Attribute.String;
-    surname: Attribute.String;
-    birthdate: Attribute.Date;
     phoneNumber: Attribute.BigInteger;
+    orders: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::order.order'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -888,22 +885,18 @@ export interface ApiOrderOrder extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.user'
     >;
-    address: Attribute.Text;
-    phone: Attribute.BigInteger;
-    total: Attribute.BigInteger;
     order_products: Attribute.Relation<
       'api::order.order',
       'oneToMany',
       'api::order-product.order-product'
     >;
-    users_permissions_user: Attribute.Relation<
-      'api::order.order',
-      'manyToOne',
-      'plugin::users-permissions.user'
-    >;
-    name: Attribute.String;
-    lastname: Attribute.String;
-    email: Attribute.String;
+    progress: Attribute.String;
+    address: Attribute.Text;
+    phone: Attribute.BigInteger;
+    total: Attribute.BigInteger;
+    name: Attribute.Text;
+    lastname: Attribute.Text;
+    email: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -946,8 +939,6 @@ export interface ApiOrderProductOrderProduct extends Schema.CollectionType {
     >;
     amount: Attribute.BigInteger;
     total: Attribute.BigInteger;
-    username: Attribute.String;
-    progress: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

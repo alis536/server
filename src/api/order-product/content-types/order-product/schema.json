@@ -28,12 +28,6 @@
     },
     "total": {
       "type": "biginteger"
-    },
-    "username": {
-      "type": "string"
-    },
-    "progress": {
-      "type": "string"
     }
   }
 }
