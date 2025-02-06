@@ -15,6 +15,9 @@
     "name": {
       "type": "string"
     },
+    "title": {
+      "type": "string"
+    },
     "brand": {
       "type": "relation",
       "relation": "manyToOne",
